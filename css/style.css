@@ -433,19 +433,6 @@ nav a:hover {
   line-height: 1.1;
 }
 
-@media (max-width: 768px) {
-
-  .hero h2 {
-    font-size: 2rem;
-  }
-  
-  
-@media (max-width: 480px) {
-  .hero.project-page h2 {
-    font-size: 1.6rem;
-  }
-  
-  
 .hero.project-page {
 margin-bottom: 0;
 }
