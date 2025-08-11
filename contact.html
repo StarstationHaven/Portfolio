@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Idrissa Presley</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1><a href="index.html">Idrissa Presley</h1></a>
+      <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="about-section">
+    <div class="about-heading">
+      <h2>Let's Connect</h2>
+    </div>
+      <div class="vertical-divider"></div>
+        <div class="about-text">
+      <p>Interested in working together or learning more? Reach out anytime by completing my contact form!</p>
+      </div>
+    </div>
+  </section>
+
+<div class="contact-form-section">
+  <div class="form-card">
+    <form action="https://formspree.io/f/xvgqdyoq" method="POST">
+
+      <div class="form-section-title">Name (required)</div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="first-name">First Name</label>
+          <input type="text" id="first-name" name="first-name" required>
+        </div>
+        <div class="form-group">
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" name="last-name" required>
+        </div>
+      </div>
+
+      <div class="form-section-title">Email (required)</div>
+      <div class="form-group">
+        <input type="email" id="email" name="_replyto" required>
+      </div>
+
+      <div class="form-section-title">Contact Reason</div>
+      <div class="service-tags-group">
+        <input type="checkbox" id="consulting" name="services[]" value="Consulting" class="hidden-checkbox">
+        <label for="consulting" class="service-tag-label">Consulting/Training</label>
+
+        <input type="checkbox" id="lxd-studio" name="services[]" value="LXD Studio" class="hidden-checkbox">
+        <label for="lxd-studio" class="service-tag-label">Event Coordination</label>
+
+        <input type="checkbox" id="learning-jam" name="services[]" value="Learning Jam Sessions" class="hidden-checkbox">
+        <label for="learning-jam" class="service-tag-label">Gaming/Esports</label>
+
+        <input type="checkbox" id="team-coaching" name="services[]" value="Team Coaching" class="hidden-checkbox">
+        <label for="team-coaching" class="service-tag-label">Instructional Design</label>
+
+        <input type="checkbox" id="one-on-one-coaching" name="services[]" value="1:1 Coaching" class="hidden-checkbox">
+        <label for="one-on-one-coaching" class="service-tag-label">Project or Work Inquiry</label>
+        
+        <input type="checkbox" id="Web-Design" name="services[]" value="Web Design" class="hidden-checkbox">
+        <label for="Web-Design" class="service-tag-label">Web Design</label>
+      </div>
+
+      <div class="form-section-title">Message (required)</div>
+      <div class="form-group">
+        <textarea id="message" name="message" rows="6" required></textarea>
+      </div>
+
+      <button type="submit" class="submit-button">Send Message</button>
+    </form>
+  </div>
+</div>
+
+  <footer>
+      <p>&copy; 2025 Idrissa Presley. All rights reserved.</p>
+<a href="https://www.linkedin.com/in/ipresleypeterson/" class="footer-contact-button footer-linkedin">LinkedIn</a>
+<a href="mailto:ipresleypete@gmail.com" class="footer-contact-button footer-email">Email</a>   
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
+

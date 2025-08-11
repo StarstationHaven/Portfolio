@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Education Applications | Idrissa Presley</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1><a href="index.html">Idrissa Presley</a></h1>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+ <section class="hero project-page">
+    <div class="about-section">
+    <div class="about-heading">
+      <h2>Simple Education Applications</h2>
+    </div>
+      <div class="vertical-divider"></div>
+        <div class="about-text">
+      <p>A collection of simple education-focused activities, online applications, quizzes, and lessons.</p>
+      </div>
+    </div>
+  </section>
+  
+  <main class="project-main">
+
+<div class="about-row">
+  <div class="about-block image-block">
+    <div class="project-image-container">
+      <a class="glightbox" href="images/Spooky Halloween Quiz.jpg" data-gallery="gallery1" aria-label="View larger image: Sutori Digital Storytelling">
+  <img src="images/Spooky Halloween Quiz.jpg" alt="Sutori Digital Storytelling Interface" class="project-image">
+</a>      </a>
+    </div>
+  </div>
+  
+  <div class="about-block content-block">
+<h3>Project Overview</h3>
+<p><b>The Project:</b> Web activities that consist of small lessons to engage learners or integrate into larger projects.</p>
+
+<p><b>My Tools:</b> The designs utilize pre-existing or custom code (HTML/CSS/Javascript) to create small-scale learning activities. The activities are hosted via Github and accessible through Github Pages.</p>
+
+  </div>
+</div>
+ 
+ 
+ <section class="project-section-card website-showcase">
+  <h3 class="section-title">Activity Showcase (Click to Visit)</h3>
+  <div class="website-gallery">
+    <div class="website-item">
+      <a href="https://starstationhaven.github.io/word-origins/" target="_blank" rel="noopener noreferrer" class="website-link">
+        <img src="images/WordOrigins.jpg" alt="Word Origins"/>
+        <div class="website-overlay">
+          <div class="visit-text">Visit Website →</div>
+        </div>
+      </a>
+      <div class="website-info">
+        <h4>Word Origins</h4>
+        <p>A simple activity that teaches the origin of common words through a click and sort activity. </p>
+        <div class="website-tech">
+          <span class="tech-tag">HTML/CSS</span>
+          <span class="tech-tag">JavaScript</span>
+          <span class="tech-tag">Click and Sort</span>
+          <span class="tech-tag">Languages</span>
+          <span class="tech-tag">Github</span>
+        </div>
+      </div>
+    </div>
+    
+        <div class="website-item">
+      <a href="https://starstationhaven.github.io/SpookyHalloweenQuiz/" target="_blank" rel="noopener noreferrer" class="website-link">
+        <img src="images/App1.jpg" alt="Sppoky Halloween Quiz" />
+        <div class="website-overlay">
+          <div class="visit-text">Visit Website →</div>
+        </div>
+      </a>
+      <div class="website-info">
+        <h4>Simple Halloween Quiz</h4>
+        <p>A quiz with simple facts themed around halloween that auto grades answers.</p>
+        <div class="website-tech">
+          <span class="tech-tag">HTML/CSS</span>
+          <span class="tech-tag">JavaScript</span>
+          <span class="tech-tag">Quiz</span>
+          <span class="tech-tag">Grading</span>
+          <span class="tech-tag">Github</span>
+        </div>
+      </div>
+    </div>
+    
+    </div>
+  </div>
+</section>
+
+
+<section class="project-navigation">
+      <div class="container">
+        <a href="#" id="prevProjectLink" class="nav-button project-nav-card previous-project">
+          <div class="nav-direction">← Previous Project</div>
+          <img src="" alt="Previous Project Thumbnail" class="nav-thumbnail" />
+          <div class="nav-title"></div>
+        </a>
+        <a href="#" id="nextProjectLink" class="nav-button project-nav-card next-project">
+          <div class="nav-direction">Next Project →</div>
+          <img src="" alt="Next Project Thumbnail" class="nav-thumbnail" />
+          <div class="nav-title"></div>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Idrissa Presley. All rights reserved.</p>
+    <a href="https://www.linkedin.com/in/ipresleypeterson/" class="footer-contact-button footer-linkedin">LinkedIn</a>
+    <a href="mailto:ipresleypete@gmail.com" class="footer-contact-button footer-email">Email</a>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+ <script>
+  const lightbox = GLightbox({
+    selector: '.glightbox'
+  });
+</script>
+<script>
+  // Lazy load YouTube iframe on click
+  const videoContainer = document.getElementById('videoContainer');
+  videoContainer.addEventListener('click', () => {
+    videoContainer.innerHTML = `<iframe src="https://www.youtube.com/embed/SW3loQvB534?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+  });
+  videoContainer.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      videoContainer.click();
+    }
+  });
+
+  // Lazy load PDF iframe on click
+  const pdfContainer = document.getElementById('pdfContainer');
+  pdfContainer.addEventListener('click', () => {
+    pdfContainer.innerHTML = `<iframe src="images/VIDEOGAMEDCLUBBROCHURE.pdf" frameborder="0" width="100%" height="450" loading="lazy"></iframe>`;
+  });
+  pdfContainer.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      pdfContainer.click();
+    }
+  });function resizeAllGridItems() {
+  const gallery = document.querySelector('.media-gallery');
+  const allItems = gallery.querySelectorAll('.media-item');
+  allItems.forEach(item => {
+    const rowHeight = parseInt(getComputedStyle(gallery).getPropertyValue('grid-auto-rows'));
+    const rowGap = parseInt(getComputedStyle(gallery).getPropertyValue('gap'));
+    const itemHeight = item.querySelector('img').getBoundingClientRect().height + item.querySelector('.caption').getBoundingClientRect().height + 16; // 16 = padding + margin adjustments, tweak as needed
+    const rowSpan = Math.ceil((itemHeight + rowGap) / (rowHeight + rowGap));
+    item.style.gridRowEnd = `span ${rowSpan}`;
+  });
+}
+
+window.addEventListener('load', resizeAllGridItems);
+window.addEventListener('resize', resizeAllGridItems);
+
+</script>
+</body>
+</html>
