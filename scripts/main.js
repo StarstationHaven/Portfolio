@@ -1,61 +1,60 @@
 const projects = [
   {
     title: "Sutori Course Design",
-    image: "../images/Sutori.jpg",
-    url: "projects/sutori/"
+    image: "../../images/Sutori.jpg",
+    url: "../sutori/"
   },
   {
     title: "Canvas LMS Course",
-    image: "../images/Course.jpg",
-    url: "projects/canvas/"
+    image: "../../images/Course.jpg",
+    url: "../canvas/"
   },
   {
     title: "Pear Deck: Culturally Sustaining Technology",
-    image: "../images/STEMed.png",
-    url: "projects/peardeck/"
+    image: "../../images/STEMed.png",
+    url: "../peardeck/"
   },
   {
     title: "Universal Design for Learning Tools",
-    image: "../images/Padlet.jpg",
-    url: "projects/universaldesign/"
+    image: "../../images/Padlet.jpg",
+    url: "../universaldesign/"
   },
   {
     title: "My Education Technologist Work",
-    image: "../images/PPTExample.png",
-    url: "projects/edtech/"
+    image: "../../images/PPTExample.png",
+    url: "../edtech/"
   },
   {
     title: "Simple Education Applications",
-    image: "../images/App1.jpg",
-    url: "projects/edactivities/"
+    image: "../../images/App1.jpg",
+    url: "../edactivities/"
   },
   {
     title: "Florida Collegiate Gaming Convention",
-    image: "images/2020Flyer.jpg",
-    url: "projects/floridagamecon/"
+    image: "../../images/2020Flyer.jpg",
+    url: "../floridagamecon/"
   },
   {
     title: "The Video Game Club at USF",
-    image: "../images/Club1.jpg",
-    url: "projects/videogameclub/"
+    image: "../../images/Club1.jpg",
+    url: "../videogameclub/"
   },
   {
     title: "Geeky Gators: Wellness Workshops",
-    image: "../images/Minecraft.png",
-    url: "projects/geekygators/"
+    image: "../../images/Minecraft.png",
+    url: "../geekygators/"
   },
   {
     title: "Graphic Design: Marketing Materials",
-    image: "../images/GamesFromGraveyard.jpg",
-    url: "projects/marketing/"
+    image: "../../images/GamesFromGraveyard.jpg",
+    url: "../marketing/"
   },
   {
     title: "Web Design: Website Collection",
-    image: "../images/ConWebsite.jpg",
-    url: "projects/webdesign/"
+    image: "../../images/ConWebsite.jpg",
+    url: "../webdesign/"
   }
 ];
-
 
 document.addEventListener('DOMContentLoaded', function () {
   // --- Mobile Nav Toggle ---
