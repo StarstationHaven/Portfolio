@@ -1,25 +1,61 @@
 const projects = [
   {
+    title: "Sutori Course Design",
+    image: "../images/Sutori.jpg",
+    url: "./sutori/"
+  },
+  {
+    title: "Canvas LMS Course",
+    image: "../images/Course.jpg",
+    url: "./canvas/"
+  },
+  {
+    title: "Pear Deck: Culturally Sustaining Technology",
+    image: "../images/STEMed.png",
+    url: "./peardeck/"
+  },
+  {
+    title: "Universal Design for Learning Tools",
+    image: "../images/Padlet.jpg",
+    url: "./universaldesign/"
+  },
+  {
+    title: "My Education Technologist Work",
+    image: "../images/PPTExample.png",
+    url: "./edtech/"
+  },
+  {
+    title: "Simple Education Applications",
+    image: "../images/App1.jpg",
+    url: "./edactivities/"
+  },
+  {
     title: "Florida Collegiate Gaming Convention",
     image: "images/2020Flyer.jpg",
-    url: "Florida-Game-Con.html"
+    url: "./floridagamecon/"
   },
   {
-    title: "eSports Curriculum Launch",
-    image: "images/EsportsCurriculum.jpg",
-    url: "about.html"
+    title: "The Video Game Club at USF",
+    image: "../images/Club1.jpg",
+    url: "./videogameclub/"
   },
   {
-    title: "Instructional Design for Accessibility",
-    image: "images/Accessibility.jpg",
-    url: "index.html"
+    title: "Geeky Gators: Wellness Workshops",
+    image: "../images/Minecraft.png",
+    url: "./geekygators/"
   },
   {
-    title: "Interactive Sutori Timeline",
-    image: "images/Sutori.jpg",
-    url: "Sutori.html"
+    title: "Graphic Design: Marketing Materials",
+    image: "../images/GamesFromGraveyard.jpg",
+    url: "./marketing/"
+  },
+  {
+    title: "Web Design: Website Collection",
+    image: "../images/ConWebsite.jpg",
+    url: "./webdesign/"
   }
 ];
+
 
 document.addEventListener('DOMContentLoaded', function () {
   // --- Mobile Nav Toggle ---
