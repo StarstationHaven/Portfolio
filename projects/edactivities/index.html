@@ -4,20 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Simple Education Applications | Idrissa Presley</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="../../css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 </head>
 <body>
   <header>
     <div class="container">
-      <h1><a href="index.html">Idrissa Presley</a></h1>
+      <h1><a href="../../">Idrissa Presley</a></h1>
       <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
       <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
+        <a href="../../">Home</a>
+        <a href="../../about/">About</a>
+        <a href="../../projects/">Projects</a>
+        <a href="../../contact/">Contact</a>
       </nav>
     </div>
   </header>
@@ -39,8 +39,8 @@
 <div class="about-row">
   <div class="about-block image-block">
     <div class="project-image-container">
-      <a class="glightbox" href="images/Spooky Halloween Quiz.jpg" data-gallery="gallery1" aria-label="View larger image: Sutori Digital Storytelling">
-  <img src="images/Spooky Halloween Quiz.jpg" alt="Sutori Digital Storytelling Interface" class="project-image">
+      <a class="glightbox" href="../../images/Spooky Halloween Quiz.jpg" data-gallery="gallery1" aria-label="View larger image: Spooky Halloween Quiz">
+  <img src="../../images/Spooky Halloween Quiz.jpg" alt="Sutori Digital Storytelling Interface" class="project-image">
 </a>      </a>
     </div>
   </div>
@@ -60,7 +60,7 @@
   <div class="website-gallery">
     <div class="website-item">
       <a href="https://starstationhaven.github.io/word-origins/" target="_blank" rel="noopener noreferrer" class="website-link">
-        <img src="images/WordOrigins.jpg" alt="Word Origins"/>
+        <img src="../../images/WordOrigins.jpg" alt="Word Origins"/>
         <div class="website-overlay">
           <div class="visit-text">Visit Website →</div>
         </div>
@@ -80,7 +80,7 @@
     
         <div class="website-item">
       <a href="https://starstationhaven.github.io/SpookyHalloweenQuiz/" target="_blank" rel="noopener noreferrer" class="website-link">
-        <img src="images/App1.jpg" alt="Sppoky Halloween Quiz" />
+        <img src="../../images/App1.jpg" alt="Sppoky Halloween Quiz" />
         <div class="website-overlay">
           <div class="visit-text">Visit Website →</div>
         </div>
@@ -126,7 +126,7 @@
     <a href="mailto:ipresleypete@gmail.com" class="footer-contact-button footer-email">Email</a>
   </footer>
 
-  <script src="scripts/main.js"></script>
+  <script src="../../scripts/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
  <script>
   const lightbox = GLightbox({
@@ -134,35 +134,44 @@
   });
 </script>
 <script>
-  // Lazy load YouTube iframe on click
+  // Lazy load YouTube iframe on click (if used, it's commented out but keeping logic)
   const videoContainer = document.getElementById('videoContainer');
-  videoContainer.addEventListener('click', () => {
-    videoContainer.innerHTML = `<iframe src="https://www.youtube.com/embed/SW3loQvB534?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
-  });
-  videoContainer.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      videoContainer.click();
-    }
-  });
+  if (videoContainer) { // Added check if element exists
+    videoContainer.addEventListener('click', () => {
+      videoContainer.innerHTML = `<iframe src="https://www.youtube.com/embed/SW3loQvB534?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+    });
+    videoContainer.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        videoContainer.click();
+      }
+    });
+  }
 
-  // Lazy load PDF iframe on click
+
+  // Lazy load PDF iframe on click (if used, it's commented out but keeping logic)
   const pdfContainer = document.getElementById('pdfContainer');
-  pdfContainer.addEventListener('click', () => {
-    pdfContainer.innerHTML = `<iframe src="images/VIDEOGAMEDCLUBBROCHURE.pdf" frameborder="0" width="100%" height="450" loading="lazy"></iframe>`;
-  });
-  pdfContainer.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      pdfContainer.click();
-    }
-  });function resizeAllGridItems() {
+  if (pdfContainer) { // Added check if element exists
+    // CORRECTED: PDF path. Goes up TWO levels (from 'projects/simple-education-applications/') to find 'images/' in the root.
+    pdfContainer.addEventListener('click', () => {
+      pdfContainer.innerHTML = `<iframe src="../../images/VIDEOGAMEDCLUBBROCHURE.pdf" frameborder="0" width="100%" height="450" loading="lazy"></iframe>`;
+    });
+    pdfContainer.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        pdfContainer.click();
+      }
+    });
+  }
+  function resizeAllGridItems() {
   const gallery = document.querySelector('.media-gallery');
   const allItems = gallery.querySelectorAll('.media-item');
   allItems.forEach(item => {
     const rowHeight = parseInt(getComputedStyle(gallery).getPropertyValue('grid-auto-rows'));
     const rowGap = parseInt(getComputedStyle(gallery).getPropertyValue('gap'));
-    const itemHeight = item.querySelector('img').getBoundingClientRect().height + item.querySelector('.caption').getBoundingClientRect().height + 16; // 16 = padding + margin adjustments, tweak as needed
+    const captionElement = item.querySelector('.caption'); // Check if caption element exists
+    const captionHeight = captionElement ? captionElement.getBoundingClientRect().height : 0; // Get height if exists
+    const itemHeight = item.querySelector('img').getBoundingClientRect().height + captionHeight + 16; // 16 = padding + margin adjustments, tweak as needed
     const rowSpan = Math.ceil((itemHeight + rowGap) / (rowHeight + rowGap));
     item.style.gridRowEnd = `span ${rowSpan}`;
   });
