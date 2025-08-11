@@ -60,7 +60,6 @@ document.addEventListener('DOMContentLoaded', function () {
   // --- Mobile Nav Toggle ---
   const navToggle = document.querySelector('.nav-toggle');
   const nav = document.querySelector('nav');
-
   if (navToggle && nav) {
     navToggle.addEventListener('click', function () {
       nav.classList.toggle('open');
@@ -68,11 +67,20 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // --- Dynamic Project Navigation ---
-  const currentURL = window.location.pathname.split("/").pop();
-  const currentIndex = projects.findIndex(p => p.url === currentURL);
+  // Get the current project folder name from the URL
+  const pathParts = window.location.pathname.split("/");
+  const currentProjectFolder = pathParts[pathParts.length - 2]; // Get the folder name (e.g., "canvas")
+  
+  // Find current project by matching the folder name in the URL
+  const currentIndex = projects.findIndex(p => {
+    // Extract folder name from the project URL (e.g., "../canvas/" -> "canvas")
+    const projectFolder = p.url.replace("../", "").replace("/", "");
+    return projectFolder === currentProjectFolder;
+  });
 
   if (currentIndex === -1) {
-    console.warn("Current project not found in project list:", currentURL);
+    console.warn("Current project not found in project list. Current folder:", currentProjectFolder);
+    console.warn("Available project folders:", projects.map(p => p.url.replace("../", "").replace("/", "")));
     return;
   }
 
