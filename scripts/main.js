@@ -32,12 +32,12 @@ const projects = [
   {
     title: "Florida Collegiate Gaming Convention",
     image: "images/2020Flyer.jpg",
-    url: "./floridagamecon/"
+    url: "../floridagamecon/"
   },
   {
     title: "The Video Game Club at USF",
     image: "../images/Club1.jpg",
-    url: "./videogameclub/"
+    url: "../videogameclub/"
   },
   {
     title: "Geeky Gators: Wellness Workshops",

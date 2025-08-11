@@ -104,6 +104,13 @@
       </div>
     </div>
 
+    <section class="project-section-card">
+      <h3 class="section-title">Showcase: Responsive Mathematics with Applied Technologies</h3>
+      <div id="pdfContainer" class="click-to-load" aria-label="Click to load PDF document" role="button" tabindex="0">
+        <p>Click To Load The Document</p>
+      </div>
+    </section>
+    
     <section class="project-section-card" id="tools-tech">
       <h3 class="section-title">Tools & Technologies</h3>
       <div class="tools-section-grid-2">
@@ -134,23 +141,19 @@
     </section>
     
     
-    <section class="project-section-card video-showcase-section">
-      <h3 class="section-title">Example Presentation on Course Development</h3>
-      <div class="video-full-width-wrapper">
-        <div id="videoContainer" class="click-to-load" aria-label="Click to load video" role="button" tabindex="0">
-          <img src="../../images/CanvasVideo.jpg" alt="Video preview thumbnail" />
-          <div class="play-button">▶</div>
-          <p>Click To Load Video</p>
-        </div>
-      </div>
-    </section>
+<section class="project-section-card">
+  <h3 class="section-title">Course Presentation</h3>
+  <div id="sutoriContainer2" class="click-to-load" aria-label="Click to load PDF document" role="button" tabindex="0">
+    <p>Click To Load The Document</p>
+  </div>
+</section>
 
-    <section class="project-section-card">
-      <h3 class="section-title">Syllabus Example (Click to Load)</h3>
-      <div id="pdfContainer" class="click-to-load" aria-label="Click to load PDF document" role="button" tabindex="0">
-        <p>Click To Load The Syllabus</p>
-      </div>
-    </section>
+<section class="project-section-card">
+  <h3 class="section-title">Course Syllabus</h3>
+  <div id="sutoriContainer3" class="click-to-load" aria-label="Click to load PDF document" role="button" tabindex="0">
+    <p>Click To Load The Syllabus</p>
+  </div>
+</section>
 
     <section class="project-navigation">
       <div class="container">
@@ -188,7 +191,7 @@
     const videoContainer = document.getElementById('videoContainer');
     if (videoContainer) {
       videoContainer.addEventListener('click', () => {
-        videoContainer.innerHTML = `<iframe src="https://www.youtube.com/embed/nU6bV9C4kR8?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+        videoContainer.innerHTML = `<iframe src="https://www.youtube.com/embed/SW3loQvB534?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
       });
       videoContainer.addEventListener('keypress', (e) => {
         if (e.key === 'Enter' || e.key === ' ') {
@@ -198,16 +201,68 @@
       });
     }
 
-    // Lazy load PDF iframe on click
+    // Lazy load first PDF
     const pdfContainer = document.getElementById('pdfContainer');
     if (pdfContainer) {
       pdfContainer.addEventListener('click', () => {
-        pdfContainer.innerHTML = `<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQn3-sFh20tW_q4P12Y81zV72_JmD95Z55_T9Q9N6P0Y1234567890/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="450" loading="lazy"></iframe>`;
+        pdfContainer.innerHTML = `
+          <iframe 
+            src="../../images/CourseShowcase.pdf" 
+            width="100%" 
+            height="600" 
+            frameborder="0" 
+            allowfullscreen
+          ></iframe>
+        `;
       });
       pdfContainer.addEventListener('keypress', (e) => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
           pdfContainer.click();
+        }
+      });
+    }
+
+    // Lazy load second PDF (Course Presentation)
+    const sutoriContainer2 = document.getElementById('sutoriContainer2');
+    if (sutoriContainer2) {
+      sutoriContainer2.addEventListener('click', () => {
+        sutoriContainer2.innerHTML = `
+          <iframe 
+            src="../../images/CoursePresentation.pdf" 
+            width="100%" 
+            height="600" 
+            frameborder="0" 
+            allowfullscreen
+          ></iframe>
+        `;
+      });
+      sutoriContainer2.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          sutoriContainer2.click();
+        }
+      });
+    }
+
+    // Lazy load third PDF (Course Syllabus)
+    const sutoriContainer3 = document.getElementById('sutoriContainer3');
+    if (sutoriContainer3) {
+      sutoriContainer3.addEventListener('click', () => {
+        sutoriContainer3.innerHTML = `
+          <iframe 
+            src="../../images/CourseSyllabus.pdf" 
+            width="100%" 
+            height="600" 
+            frameborder="0" 
+            allowfullscreen
+          ></iframe>
+        `;
+      });
+      sutoriContainer3.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          sutoriContainer3.click();
         }
       });
     }
