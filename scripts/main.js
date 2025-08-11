@@ -2,57 +2,57 @@ const projects = [
   {
     title: "Sutori Course Design",
     image: "../images/Sutori.jpg",
-    url: "./sutori/"
+    url: "projects/sutori/"
   },
   {
     title: "Canvas LMS Course",
     image: "../images/Course.jpg",
-    url: "./canvas/"
+    url: "projects/canvas/"
   },
   {
     title: "Pear Deck: Culturally Sustaining Technology",
     image: "../images/STEMed.png",
-    url: "./peardeck/"
+    url: "projects/peardeck/"
   },
   {
     title: "Universal Design for Learning Tools",
     image: "../images/Padlet.jpg",
-    url: "./universaldesign/"
+    url: "projects/universaldesign/"
   },
   {
     title: "My Education Technologist Work",
     image: "../images/PPTExample.png",
-    url: "./edtech/"
+    url: "projects/edtech/"
   },
   {
     title: "Simple Education Applications",
     image: "../images/App1.jpg",
-    url: "./edactivities/"
+    url: "projects/edactivities/"
   },
   {
     title: "Florida Collegiate Gaming Convention",
     image: "images/2020Flyer.jpg",
-    url: "../floridagamecon/"
+    url: "projects/floridagamecon/"
   },
   {
     title: "The Video Game Club at USF",
     image: "../images/Club1.jpg",
-    url: "../videogameclub/"
+    url: "projects/videogameclub/"
   },
   {
     title: "Geeky Gators: Wellness Workshops",
     image: "../images/Minecraft.png",
-    url: "./geekygators/"
+    url: "projects/geekygators/"
   },
   {
     title: "Graphic Design: Marketing Materials",
     image: "../images/GamesFromGraveyard.jpg",
-    url: "./marketing/"
+    url: "projects/marketing/"
   },
   {
     title: "Web Design: Website Collection",
     image: "../images/ConWebsite.jpg",
-    url: "./webdesign/"
+    url: "projects/webdesign/"
   }
 ];
 
